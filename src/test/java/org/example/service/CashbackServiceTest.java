@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class CashbackServiceTest {
   @Test
   void shouldCalculateWithoutLimit() {
-    final var calculator = new Calculator();
+    final var service = new CashbackService();
     final var amount = 100_00;
     final var expected = 3_00;
 
-    final var actual = calculator.cashback(amount);
+    final var actual = service.calculate(amount);
     assertEquals(expected, actual);
   }
 
